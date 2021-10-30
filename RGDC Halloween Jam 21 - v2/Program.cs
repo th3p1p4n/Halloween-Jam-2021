@@ -137,7 +137,6 @@ namespace GameJamTextGame
                 "It seems even happier.\n" +
                 "[ :) ] <3\n" +
                 "Press [C] to continue.");
-
             do
             {
                 key = Console.ReadKey(true);
