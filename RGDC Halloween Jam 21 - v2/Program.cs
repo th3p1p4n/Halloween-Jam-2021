@@ -234,6 +234,27 @@ namespace GameJamTextGame
             } while (key.KeyChar != 'c');
 
             Console.Clear();
+
+            Console.WriteLine(
+                "There is another door opposite the one you both entered. A large exit\n" +
+                "sign hangs above the door. This is clearly the end of the game.\n" +
+                "\n" +
+                "               [ E X I T ]\n" +
+                "               ___________\n" +
+                "               |    |    |\n" +
+                "               |    |    |\n" +
+                "               |    |    |\n" +
+                "               |    |    |\n" +
+                "               |   *|*   |\n" +
+                "               |    |    |\n" +
+                "_____       ___|____|____|____\n" +
+                "Press [L] to look for the door-opening, creature-sized button.");
+            do
+            {
+                key = Console.ReadKey(true);
+            } while (key.KeyChar != 'l');
+            
+            Console.Clear();
         }
     }
 }
