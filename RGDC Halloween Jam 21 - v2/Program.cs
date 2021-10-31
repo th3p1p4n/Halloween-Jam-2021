@@ -227,7 +227,7 @@ namespace GameJamTextGame
                 "You pull the lever and the door reopens. {0} rushes through\n" +
                 "the door. It obviously missed you.\n" +
                 "[ :D ] <3\n" +
-                "Press [C] to continue.");
+                "Press [C] to continue.", name);
             do
             {
                 key = Console.ReadKey(true);
