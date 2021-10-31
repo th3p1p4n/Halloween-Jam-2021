@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 /*
  * Text-Based Game because that's all we know how to do
@@ -255,6 +256,66 @@ namespace GameJamTextGame
             } while (key.KeyChar != 'l');
             
             Console.Clear();
+
+            Console.WriteLine(
+                "You look around the room. There is a hole in the center, and at the bottom, the button. <name> looks down the hole, then back to you. \n" +
+                "It shudders.\n" +
+                "~* { :( } *~\n");
+
+            string sadChoice = "";
+            do
+            {
+                Console.WriteLine(
+                   "Press [C] to continue.\n" +
+                   "Press [G] to give up.");
+                sadChoice = Console.ReadKey().KeyChar.ToString().Trim().ToLower();
+
+                if (sadChoice == "c")
+                {
+                    Console.WriteLine(
+                    $"You shove {name}. it struggles.\n");
+                    Random rand = new Random();
+                    if (rand.Next() % 2 == 0)
+                    {
+                        Console.WriteLine($"You succeed at shoving {name}. It falls into the pit with a deafening scream and a sickening thud.");
+                        Thread.Sleep(1000);
+                        Console.WriteLine("The button is pressed.");
+                        Thread.Sleep(1000);
+                        Console.WriteLine("The door opens\n");
+                        Thread.Sleep(3000);
+                        Console.WriteLine(
+                            "YOU WIN!\n\n" +
+                            "_______________              ______________\n" +
+                            "               |             |\n" +
+                            "               |             |\n" +
+                            "               |             |\n" +
+                            "               |             |\n" +
+                            "               |             |\n" +
+                            "               |             |\n" +
+                            "               |             |\n" +
+                            "               |             |\n" +
+                            "               |             |\n" +
+                            "               |    [ X( ]   |\n" +
+                            "               -----======----");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"You failed at shoving {name} into the pit.");
+                        Thread.Sleep(2000);
+                        sadChoice = "";
+                    }
+                }
+
+                else if(sadChoice == "g")
+                {
+                    Console.WriteLine(
+                        "It seems you're stuck here, then.\n" +
+                        $"At least you have {name}");
+                    Thread.Sleep(5000);
+                    sadChoice = "";
+                }
+            }
+            while (sadChoice != "c" && sadChoice != "g");
         }
     }
 }
