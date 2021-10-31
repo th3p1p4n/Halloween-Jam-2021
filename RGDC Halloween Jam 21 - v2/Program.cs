@@ -142,7 +142,98 @@ namespace GameJamTextGame
                 key = Console.ReadKey(true);
             } while (key.KeyChar != 'c');
 
+            Console.Clear();
 
+            Console.WriteLine(
+                "{0} beckons for you to follow (it makes a beckoning expression).\n" +
+                "Press [W] to walk to {0}.", name);
+            do
+            {
+                key = Console.ReadKey(true);
+            } while (key.KeyChar != 'w');
+            Console.WriteLine(
+                "It leads you to a door. The door is locked. {0} looks at you expectantly.\n" +
+                "Press [L] to look around.", name);
+            do
+            {
+                key = Console.ReadKey(true);
+            } while (key.KeyChar != 'l');
+
+            Console.Clear();
+
+            Console.WriteLine(
+                "You see a large, creature-sized button on the floor, in front of the door.\n" +
+                "\n" +
+                "                  _______\n" +
+                "                  |  |  |\n" +
+                "                  |  |  |\n" +
+                "                  | *|* |\n" +
+                "                  |  |  |\n" +
+                "____======________|__|__|_______\n" +
+                "Press [D] to direct {0} to stand on the button.", name);
+            do
+            {
+                key = Console.ReadKey(true);
+            } while (key.KeyChar != 'd');
+
+            Console.Clear();
+
+            Console.WriteLine(
+                "{0} stands on the button, and the door swings open.\n" +
+                "It looks very pleased with itself.\n" +
+                "\n" +
+                "                  _______\n" +
+                "                  |     |\n" +
+                "                  |     |\n" +
+                "                  |     |\n" +
+                "                  |     |\n" +
+                "____[ :) ]________|_____|_______\n" +
+                "    ======\n" +
+                "Press [W] to walk through the door.", name);
+            do
+            {
+                key = Console.ReadKey(true);
+            } while (key.KeyChar != 'w');
+            
+            Console.Clear();
+
+            Console.WriteLine(
+                "After you pass through the door, {0} tries to follow you.\n" +
+                "As soon as it leaves the button, the door closes." +
+                "\n" +
+                "                  _______\n" +
+                "                  |  |  |\n" +
+                "                  |  |  |\n" +
+                "                  | *|* |\n" +
+                "                  |  |  |\n" +
+                "____======_[ :o ]_|__|__|_______\n" +
+                "Press [L] to look for a way to open the door from your side.", name);
+
+            do
+            {
+                key = Console.ReadKey(true);
+            } while (key.KeyChar != 'l');
+
+            Console.Clear();
+
+            Console.WriteLine(
+                "You see a lever next to the door.\n" +
+                "Press [P] to pull the lever.");
+            do
+            {
+                key = Console.ReadKey(true);
+            } while (key.KeyChar != 'p');
+            Console.WriteLine(
+                "You pull the lever and the door reopens. {0} rushes through\n" +
+                "the door. It obviously missed you.\n" +
+                "[ :D ] <3\n" +
+                "Press [C] to continue.");
+            do
+            {
+                key = Console.ReadKey(true);
+            } while (key.KeyChar != 'c');
+
+            Console.Clear();
         }
     }
 }
